@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>position</title>
+    <style media="screen">
+      html{
+        border: 2px solid gray;
+      }
+      div{
+        border:5px solid blue;
+        margin:10px;
+      }
+      #me{
+        position: relative;
+        left:100px;
+        top:100px;
+        /* position은 left와 top이 우선시된다
+           static -> 원래 초기위치로 고정된다
+           relative -> 지정해준 위치로 이동
+         */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="other">other</div>
+    <div id="parent">
+      parent
+      <div id="me">me</div>
+    </div>
+  </body>
+</html>

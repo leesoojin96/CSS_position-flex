@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>flex of attribute</title>
+    <style media="screen">
+      .container{
+        background: #cbceff;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+       }
+      .item{
+        background: #17005e;
+        color:#fff;
+        border:1px solid #fff;
+        /* flex-grow: 1; */
+       }
+       .item:nth-child(1){
+         flex-basis: 200px;
+         flex-shrink: 1;
+       }
+       .item:nth-child(2){
+         flex-basis: 400px;
+         /* flex-grow: 4; */
+         flex-shrink: 2;
+       }
+       /*
+      flex-basis -> 어떤 방향의 크기를 결정
+      flex-grow -> n분의 1을 해서 공간을 가지는데
+                  숫자가 클 수록 더 많은 공간을 가진다
+     flex-shrink -> shrink : 줄인다
+                    basis의 값을 분담한다
+        */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </body>
+</html>
